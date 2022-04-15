@@ -3,8 +3,9 @@
 # How to use?
 1. Download dblp.v12.json from https://www.kaggle.com/datasets/mathurinache/citation-network-dataset to data folder
 2. run pip install -r requirements.txt
-3. run indexing.py
-4. run app.py and you can start your search!
+3. run elasticsearch
+4. run indexing.py
+5. run app.py and you can start your search!
 
 # Need to improve
 1. Beautify UI

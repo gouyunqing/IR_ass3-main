@@ -1,7 +1,7 @@
 # IR_ass3
 
 # How to use?
-1. Download dblp.v12.json from https://www.kaggle.com/datasets/mathurinache/citation-network-dataset to data folder
+1. Download dblp.v12.json from https://www.kaggle.com/datasets/mathurinache/citation-network-dataset to data folder(not necessary)
 2. run pip install -r requirements.txt
 3. run elasticsearch
 4. run indexing.py

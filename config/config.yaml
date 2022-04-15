@@ -1,0 +1,14 @@
+data_config:
+    path: id2corpus.pickle
+    ref_path: id2reference.pickle
+es_config:
+    host: 127.0.0.1
+    port: 9200
+    index_name: ir_ass3
+    es_address: 127.0.0.1:9200
+flask_config:
+    host: 127.0.0.1
+    port: 5000
+
+
+

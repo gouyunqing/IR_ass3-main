@@ -27,9 +27,9 @@ def get_es():
         raw_query = request.form.get('query')
         query = parse_query(query=raw_query, lem=lem, english_punctuations=english_punctuations)
 
-        result = search(query=raw_query, es=es, index_name=index_name, id2page_rank=id2page_rank)
+        result = search(query=query, es=es, index_name=index_name, id2page_rank=id2page_rank)
 
-        print(result)
+        # print(result)
 
         return Response(json.dumps(result), mimetype='application/json')
 

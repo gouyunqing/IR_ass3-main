@@ -88,27 +88,27 @@ def search(query, es, index_name, id2page_rank):
     return final_result
 
 
-if __name__ == '__main__':
-    # load config from config.yaml
-    f = open('config/config.yaml', 'r', encoding='utf-8')
-    cfg = f.read()
-    config_dict = yaml.load(cfg, Loader=yaml.FullLoader)
-
-    host = config_dict['es_config']['host']
-    port = config_dict['es_config']['port']
-    index_name = config_dict['es_config']['index_name']
-
-    # body = {"query": {"match_all": {}}}
-
-    es = Elasticsearch(host=host, port=port)
-    with open('id2page_rank.pickle', 'rb') as f:
-        id2page_rank = pickle.load(f)
-    # result = es.search(index="ir_ass3", doc_type="_doc", body=body)
-    # print(result)
-
-    english_punctuations = [',', '.', ':', ';', '?', '(', ')', '[', ']', '&', '!', '*', '@', '#', '$', '%']
-    lem = WordNetLemmatizer()
-
-    result = search('Minimum memory', es, index_name, id2page_rank)
-
-    print(result)
+# if __name__ == '__main__':
+#     # load config from config.yaml
+#     f = open('config/config.yaml', 'r', encoding='utf-8')
+#     cfg = f.read()
+#     config_dict = yaml.load(cfg, Loader=yaml.FullLoader)
+#
+#     host = config_dict['es_config']['host']
+#     port = config_dict['es_config']['port']
+#     index_name = config_dict['es_config']['index_name']
+#
+#     # body = {"query": {"match_all": {}}}
+#
+#     es = Elasticsearch(host=host, port=port)
+#     with open('id2page_rank.pickle', 'rb') as f:
+#         id2page_rank = pickle.load(f)
+#     # result = es.search(index="ir_ass3", doc_type="_doc", body=body)
+#     # print(result)
+#
+#     english_punctuations = [',', '.', ':', ';', '?', '(', ')', '[', ']', '&', '!', '*', '@', '#', '$', '%']
+#     lem = WordNetLemmatizer()
+#
+#     result = search('Minimum memory', es, index_name, id2page_rank)
+#
+#     print(result)
